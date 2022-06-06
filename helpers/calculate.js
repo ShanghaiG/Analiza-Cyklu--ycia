@@ -98,7 +98,8 @@ const calculateData = (data) => {
       });
     }
   }
-
+  survivals.unshift(null);
+  hazards.unshift(null);
   return { outputArray, survivals, hazards };
 };
 
