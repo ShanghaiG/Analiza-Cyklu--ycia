@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+.button {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  width: 259px;
+  border-radius: 5px;
+  font-family: "Poppins";
+  font-style: normal;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fad247;
+  color: black;
+}
+
+.button:hover {
+  background-color: #fbdd6f;
+  color: black;
+  text-emphasis-color: black;
+}
+
+.hazard {
+  padding: 20px;
+  /* margin-left: 33%;
+  margin-top: 12%; */
+  margin: 12% auto auto;
+  margin-bottom: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  width: 800px;
+  background-color: white;
+}
+
+.survivalDistribution {
+  padding: 20px;
+  /* margin-left: 33%;
+  margin-top: 12%; */
+  margin: 12% auto auto;
+  margin-bottom: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  width: 800px;
+  background-color: white;
+}

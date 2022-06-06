@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+.h1Light {
+  margin: 0;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 72px;
+  color: white;
+}
+
+.button {
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  margin-top: 12%;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hazard {
+  padding: 20px;
+  /* margin-left: 33%;
+  margin-top: 12%; */
+  margin: 12% auto auto;
+  margin-bottom: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  width: 800px;
+  background-color: white;
+}
