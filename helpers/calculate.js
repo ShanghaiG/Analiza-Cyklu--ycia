@@ -8,13 +8,17 @@ const calculateData = (data) => {
     2000, 4000, 6000, 8000, 10000, 12000, 14000, 16000,
   ];
 
+  const allIntervalEndpoints = [0, ...intervalEndpoints];
+
   const firstSurvival = 1;
 
   const nElements = [];
   const dElements = [];
   const wElements = [];
   const survivals = [];
+  const survivalsOutput = [];
   const hazards = [];
+  const hazardsOutput = [];
 
   //n, d, w elements
   for (const element of intervalEndpoints) {
@@ -98,9 +102,31 @@ const calculateData = (data) => {
       });
     }
   }
-  survivals.unshift(null);
-  hazards.unshift(null);
-  return { outputArray, survivals, hazards };
+
+  // survivals output for charts
+  for (let i = 0; i < allIntervalEndpoints.length; i++) {
+    if (allIntervalEndpoints[i] === 0) {
+      survivalsOutput.push({
+        x: allIntervalEndpoints[i],
+        y: 1,
+      });
+    } else {
+      survivalsOutput.push({
+        x: allIntervalEndpoints[i],
+        y: survivals[i - 1],
+      });
+    }
+  }
+
+  // hazards output for charts
+  for (let i = 0; i < intervalEndpoints.length; i++) {
+    hazardsOutput.push({
+      x: intervalEndpoints[i] - INTERVAL_MIDPOINT_DEFAULT,
+      y: hazards[i],
+    });
+  }
+
+  return { outputArray, survivals: survivalsOutput, hazards: hazardsOutput };
 };
 
 export default calculateData;

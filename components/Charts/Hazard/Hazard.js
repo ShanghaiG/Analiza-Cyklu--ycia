@@ -12,7 +12,7 @@ import {
   Filler,
 } from "chart.js";
 
-import { Line } from "react-chartjs-2";
+import { Scatter } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
@@ -29,11 +29,10 @@ const Hazard = (props) => {
   const { hazardData } = props;
 
   const data = {
-    labels: [
-      0, 2000, 4000, 6000, 8000, 10000, 12000, 14000, 16000, 18000, 20000,
-    ],
+    labels: [0, 2500, 5000, 7500, 10000, 12500, 15000, 17500],
     datasets: [
       {
+        showLine: true,
         data: hazardData,
       },
     ],
@@ -73,19 +72,26 @@ const Hazard = (props) => {
           display: true,
           text: "Hazard Function",
         },
+        beginAtZero: true,
       },
       x: {
         title: {
           display: true,
           text: "Days elapsed",
         },
+        beginAtZero: true,
+        min: 0,
+        ticks: {
+          stepSize: 2500,
+        },
+        max: 17500,
       },
     },
   };
 
   return (
     <>
-      <Line data={data} height={50} width={50} options={options} />
+      <Scatter data={data} height={50} width={50} options={options} />
     </>
   );
 };

@@ -7,8 +7,6 @@ export default async (req, res) => {
   const parsedData = parseData(file);
   const calculatedData = calculateData(parsedData);
 
-  console.log("caluclatedData", calculatedData);
-
   res.statusCode = 200;
   res.json(calculatedData);
 };

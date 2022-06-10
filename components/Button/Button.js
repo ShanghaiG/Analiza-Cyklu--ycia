@@ -46,8 +46,6 @@ const Button = (props) => {
     }
   });
 
-  console.log("dane", importedData);
-
   return (
     <>
       <div>
